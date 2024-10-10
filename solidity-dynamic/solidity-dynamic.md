@@ -1,4 +1,4 @@
-# Storage Slot III (Complex Types)
+# Storage Slots of Dynamic Types (Mappings, Arrays, Strings, Bytes)
 
 Dynamic-sized types in Solidity (sometimes referred to as complex types) are data types with variable size. They include mappings, nested mappings, arrays, nested arrays, strings, bytes, and structs that contain any of those types. This article shows how they are encoded and kept in [storage](https://www.rareskills.io/post/evm-solidity-storage-layout).
 
