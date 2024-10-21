@@ -270,7 +270,7 @@ contract ImplementationChild is Initializable, ImplementationParent {
 
 Once the implementation contract is "initialized," it is no longer possible for anyone to execute the initialization function and become the owner of the contract.
 
-This is no longer the recommended mitigation, the recommended solution to prevent an attacker from becoming the owner of an implementation contract is show in the next section, but the modifier `initializer` keeps the variable `construction` for backward compatibility reasons. It is possible that it will be removed in a future version of this contract.
+This is no longer the recommended mitigation, the recommended solution to prevent an attacker from becoming the owner of an implementation contract is shown in the next section, but the modifier `initializer` keeps the variable `construction` for backward compatibility reasons. It is possible that it will be removed in a future version of this contract.
 
 ## The _disableInitializers() function
 
