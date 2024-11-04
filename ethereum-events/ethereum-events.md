@@ -262,7 +262,7 @@ Similarly, there is no intrinsic limit to the length of strings or arrays stored
 
 However, there cannot be more than three indexed arguments (topics) in an event. An anonymous event can have 4 indexed arguments (we will cover this distinction later).
 
-An argument with zero events is also valid.
+An event with zero arguments is also valid.
 
 ## Variable names in events are optional but recommended
 
