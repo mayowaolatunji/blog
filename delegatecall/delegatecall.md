@@ -79,7 +79,7 @@ contract Caller {
             revert("Something went wrong");
         }
     }
-        // calls a non-existant function
+        // calls a non-existent function
     function callWrong() public {
         (bool success, bytes memory data) = called.call(
             abi.encodeWithSignature("thisFunctionDoesNotExist()")
@@ -98,7 +98,7 @@ We must be careful to track if the call succeeded or not, and we'll revisit this
 
 ## What the EVM does under the hood
 
-The purpose of the `increment` function is to increment the state variable called `number`. Since the EVM does not have knowledge of state variables but **operates on storage slots**, what the function actually does is to increases the value in the first slot of the storage, known as slot 0. This operation occurs within the storage of the `Called` contract.
+The purpose of the `increment` function is to increment the state variable called `number`. Since the EVM does not have knowledge of state variables but **operates on storage slots**, what the function actually does is to increase the value in the first slot of the storage, known as slot 0. This operation occurs within the storage of the `Called` contract.
 
 ![caller contract using the call function to a called contract](https://static.wixstatic.com/media/706568_ac35840fb9c349189d9504a644afcdd3~mv2.png/v1/fill/w_459,h_265,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/706568_ac35840fb9c349189d9504a644afcdd3~mv2.png)
 
@@ -301,7 +301,7 @@ The `Caller` contract still invokes an implementation contract via **`delegateca
 contract Called {
     uint public discountRate = 20;
 
-    function calculateDiscountPrice(uint256 _amount) public pure returns (uint) {
+    function calculateDiscountPrice(uint256 amount) public pure returns (uint) {
         return amount - (amount * discountRate)/100;
     }
 }
@@ -340,8 +340,8 @@ Another tricky issue with **`delegatecall`** arises when immutable or constant v
 contract Caller {
     uint256 private immutable a = 3;
     function getValueDelegate(address called) public pure returns (uint256) {
-        (bool success, bytes memory data) = B.delegatecall(
-            abi.encodewithSignature("getValue()"));
+        (bool success, bytes memory data) = called.delegatecall(
+            abi.encodeWithSignature("getValue()"));
         return abi.decode(data, (uint256)); // is this 3 or 2?
     }
 }
