@@ -18,6 +18,8 @@ Tornado Cash is a fairly advanced smart contract, so check out our [Solidity Tut
 
 Tornado Cash is currently sanctioned by the United States government, interacting with it may "taint" your wallet and cause transactions from it to be flagged later when interacting with centralized exchanges.
 
+**Update for 2024**: As of November 28, 2024 the saction has been lifted by the US Appeals Court.
+
 ### Tornado cash hack
 
 On May 27, the [Tornado Cash governance smart contracts](https://github.com/tornadocash/tornado-governance) (not the smart contracts we will review here) were hacked when an attacker passed a malicious proposal that gave them the majority of the ERC20 voting tokens for governance [ERC20 voting tokens for governance](https://www.rareskills.io/post/erc20-votes-erc5805-and-erc6372). They have since [handed back control](https://www.ccn.com/tornado-cash-hack-saga-comes-to-an-end-did-the-hacker-win-this-battle/), keeping a relatively small amount for themselves.
