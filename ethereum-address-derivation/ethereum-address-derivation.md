@@ -776,6 +776,6 @@ In this article, we explored how Ethereum contract addresses are predicted acros
 
 ## EIPs referenced in this guide
 
-[EIP-161](https://eips.ethereum.org/EIPS/eip-161): Defines Account creation transactions, introduces the concept of "empty accounts," nonce handling, and rules for their cleanup.
-[EIP-1014](https://eips.ethereum.org/EIPS/eip-1014): Introduces the `CREATE2` opcode.
+[EIP-161](https://eips.ethereum.org/EIPS/eip-161): Defines Account creation transactions, introduces the concept of "empty accounts," nonce handling, and rules for their cleanup. <br>
+[EIP-1014](https://eips.ethereum.org/EIPS/eip-1014): Introduces the `CREATE2` opcode. <br>
 [EIP-2681](https://eips.ethereum.org/EIPS/eip-2681): Defines the Limit of account nonce to be between `0` and `2^64-1`.
